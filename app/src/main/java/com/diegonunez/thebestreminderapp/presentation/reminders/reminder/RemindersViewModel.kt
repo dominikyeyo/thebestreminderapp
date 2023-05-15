@@ -6,8 +6,9 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.diegonunez.thebestreminderapp.domain.repository.ReminderRepository
-import com.diegonunez.thebestreminderapp.core.Constants.Companion.NO_VALUE
+
 import com.diegonunez.thebestreminderapp.domain.model.Reminder
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.NO_VALUE
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

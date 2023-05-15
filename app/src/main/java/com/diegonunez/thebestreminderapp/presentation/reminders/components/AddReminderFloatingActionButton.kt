@@ -6,7 +6,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.runtime.Composable
-import com.diegonunez.thebestreminderapp.core.Constants.Companion.ADD_REMINDER
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.ADD_REMINDER
 
 @Composable
 fun AddReminderFloatingActionButton(

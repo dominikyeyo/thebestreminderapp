@@ -5,7 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.navigation.compose.rememberNavController
-import com.diegonunez.thebestreminderapp.navigation.NavGraph
+import com.diegonunez.thebestreminderapp.presentation.navigation.NavGraph
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

@@ -7,7 +7,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import com.diegonunez.thebestreminderapp.core.Constants.Companion.REMINDER_TABLE
+import com.diegonunez.thebestreminderapp.data.core.Constants.Companion.REMINDER_TABLE
 import com.diegonunez.thebestreminderapp.data.dao.ReminderDao
 import com.diegonunez.thebestreminderapp.data.network.ReminderDb
 import com.diegonunez.thebestreminderapp.data.repository.ReminderRepositoryImpl

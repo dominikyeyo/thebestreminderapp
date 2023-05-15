@@ -6,7 +6,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
-import com.diegonunez.thebestreminderapp.core.Constants.Companion.REMINDER_TABLE
+import com.diegonunez.thebestreminderapp.data.core.Constants.Companion.REMINDER_TABLE
 import com.diegonunez.thebestreminderapp.domain.model.Reminder
 import com.diegonunez.thebestreminderapp.domain.repository.Reminders
 import kotlinx.coroutines.flow.Flow

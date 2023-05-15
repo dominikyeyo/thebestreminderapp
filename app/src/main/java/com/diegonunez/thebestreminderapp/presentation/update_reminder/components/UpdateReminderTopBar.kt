@@ -7,7 +7,8 @@ import androidx.compose.material.TopAppBar
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.ArrowBack
 import androidx.compose.runtime.Composable
-import com.diegonunez.thebestreminderapp.core.Constants.Companion.UPDATE_REMINDER_SCREEN
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.UPDATE_REMINDER_SCREEN
+
 
 @Composable
 fun UpdateReminderTopBar(

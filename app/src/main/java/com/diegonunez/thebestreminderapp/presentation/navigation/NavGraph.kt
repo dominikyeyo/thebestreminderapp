@@ -1,4 +1,4 @@
-package com.diegonunez.thebestreminderapp.navigation
+package com.diegonunez.thebestreminderapp.presentation.navigation
 
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.runtime.Composable
@@ -7,9 +7,10 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.REMINDER_ID
 
-import com.diegonunez.thebestreminderapp.core.Constants.Companion.REMINDER_ID
-import com.diegonunez.thebestreminderapp.navigation.Screen.UpdateReminderScreen
+
+import com.diegonunez.thebestreminderapp.presentation.navigation.Screen.UpdateReminderScreen
 import com.diegonunez.thebestreminderapp.presentation.reminders.reminder.RemindersScreen
 import com.diegonunez.thebestreminderapp.presentation.update_reminder.UpdateReminderScreen
 

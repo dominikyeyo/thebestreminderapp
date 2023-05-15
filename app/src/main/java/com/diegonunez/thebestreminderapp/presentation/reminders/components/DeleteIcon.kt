@@ -5,7 +5,8 @@ import androidx.compose.material.IconButton
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.runtime.Composable
-import com.diegonunez.thebestreminderapp.core.Constants.Companion.DELETE_REMINDER
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.DELETE_REMINDER
+
 
 @Composable
 fun DeleteIcon(

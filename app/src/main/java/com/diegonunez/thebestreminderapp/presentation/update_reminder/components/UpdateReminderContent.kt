@@ -14,9 +14,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.diegonunez.thebestreminderapp.core.Constants.Companion.REMINDER_NAME
-import com.diegonunez.thebestreminderapp.core.Constants.Companion.UPDATE
-import com.diegonunez.thebestreminderapp.core.Constants.Companion.DESCRIPTION
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.REMINDER_NAME
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.UPDATE
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.DESCRIPTION
 import com.diegonunez.thebestreminderapp.domain.model.Reminder
 
 @Composable

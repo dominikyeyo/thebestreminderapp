@@ -10,10 +10,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.unit.dp
-import com.diegonunez.thebestreminderapp.core.Constants.Companion.ADD
-import com.diegonunez.thebestreminderapp.core.Constants.Companion.ADD_REMINDER
-import com.diegonunez.thebestreminderapp.core.Constants.Companion.DISMISS
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.ADD
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.DISMISS
 import com.diegonunez.thebestreminderapp.domain.model.Reminder
+
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.ADD_REMINDER
 
 @Composable
 fun AddReminderAlertDialog(

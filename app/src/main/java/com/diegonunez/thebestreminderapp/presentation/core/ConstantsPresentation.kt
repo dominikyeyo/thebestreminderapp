@@ -1,10 +1,7 @@
-package com.diegonunez.thebestreminderapp.core
+package com.diegonunez.thebestreminderapp.presentation.core
 
-class Constants {
+class ConstantsPresentation {
     companion object{
-
-        //Room
-        const val REMINDER_TABLE = "reminder_table"
 
         //Screens
         const val REMINDERS_SCREEN = "reminders"
