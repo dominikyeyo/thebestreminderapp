@@ -44,6 +44,7 @@ fun UpdateReminderScreen(
                 },
                 navigateBack = navigateBack
             )
+
         }
     )
 }

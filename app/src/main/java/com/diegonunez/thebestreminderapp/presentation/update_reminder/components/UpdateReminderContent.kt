@@ -41,6 +41,7 @@ fun UpdateReminderContent(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Top
     ) {
+
         Spacer(
             modifier = Modifier.height(20.dp)
         )
