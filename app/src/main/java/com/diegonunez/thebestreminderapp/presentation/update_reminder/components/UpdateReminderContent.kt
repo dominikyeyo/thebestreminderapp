@@ -14,10 +14,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.REMINDER_NAME
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.REMINDER_NAME_PH
 import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.UPDATE
-import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.DESCRIPTION
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.REMINDER_DESCRIPTION_PH
 import com.diegonunez.thebestreminderapp.domain.model.Reminder
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.REMINDER_DATE_PH
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.REMINDER_TYPE_PH
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.REMINDER_DATE
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.REMINDER_DESCRIPTION
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.REMINDER_NAME
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.REMINDER_TYPE
 
 @Composable
 fun UpdateReminderContent(
@@ -25,22 +31,29 @@ fun UpdateReminderContent(
     reminder: Reminder,
     updateName: (title: String) -> Unit,
     updateDescription: (description: String) -> Unit,
+    updateDate: (date: String) -> Unit,
+    updateType: (type: String) -> Unit,
     updateReminder: (reminder: Reminder) -> Unit,
     navigateBack: () -> Unit
 ) {
     Column(
         modifier = Modifier.fillMaxSize().padding(padding),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
+        verticalArrangement = Arrangement.Top
     ) {
+        Spacer(
+            modifier = Modifier.height(20.dp)
+        )
+
         TextField(
             value = reminder.title,
             onValueChange = { title ->
                 updateName(title)
             },
+            label = { Text(text = REMINDER_NAME) },
             placeholder = {
                 Text(
-                    text = REMINDER_NAME
+                    text = REMINDER_NAME_PH
                 )
             }
         )
@@ -52,11 +65,45 @@ fun UpdateReminderContent(
             onValueChange = { description ->
                 updateDescription(description)
             },
+            label = { Text(text = REMINDER_DESCRIPTION) },
             placeholder = {
                 Text(
-                    text = DESCRIPTION
+                    text = REMINDER_DESCRIPTION_PH
                 )
             }
+        )
+        Spacer(
+            modifier = Modifier.height(8.dp)
+        )
+        TextField(
+            value = reminder.date,
+            onValueChange = { date ->
+                updateDate(date)
+            },
+            label = { Text(text = REMINDER_DATE) },
+            placeholder = {
+                Text(
+                    text = REMINDER_DATE_PH
+                )
+            }
+        )
+        Spacer(
+            modifier = Modifier.height(8.dp)
+        )
+        TextField(
+            value = reminder.type,
+            onValueChange = { type ->
+                updateType(type)
+            },
+            label = { Text(text = REMINDER_TYPE) },
+            placeholder = {
+                Text(
+                    text = REMINDER_TYPE_PH
+                )
+            }
+        )
+        Spacer(
+            modifier = Modifier.height(8.dp)
         )
         Button(
             onClick = {

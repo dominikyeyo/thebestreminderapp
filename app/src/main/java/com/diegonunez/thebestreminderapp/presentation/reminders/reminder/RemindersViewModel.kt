@@ -8,7 +8,7 @@ import androidx.lifecycle.viewModelScope
 import com.diegonunez.thebestreminderapp.domain.repository.ReminderRepository
 
 import com.diegonunez.thebestreminderapp.domain.model.Reminder
-import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.NO_VALUE
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.NO_VALUE_PH
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -17,7 +17,7 @@ import javax.inject.Inject
 class RemindersViewModel @Inject constructor(
     private val repo: ReminderRepository
 ) : ViewModel() {
-    var reminder by mutableStateOf(Reminder(0, NO_VALUE, NO_VALUE))
+    var reminder by mutableStateOf(Reminder(0, NO_VALUE_PH, NO_VALUE_PH,NO_VALUE_PH,NO_VALUE_PH))
         private set
     var openDialog by mutableStateOf(false)
 
@@ -47,7 +47,18 @@ class RemindersViewModel @Inject constructor(
 
     fun updateDescription(description: String) {
         reminder = reminder.copy(
-            description = description //TODO: update
+            description = description
+        )
+    }
+
+    fun updateDate(date: String) {
+        reminder = reminder.copy(
+            date = date
+        )
+    }
+    fun updateType(type: String) {
+        reminder = reminder.copy(
+            type = type
         )
     }
 

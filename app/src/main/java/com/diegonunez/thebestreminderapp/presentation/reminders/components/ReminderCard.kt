@@ -42,10 +42,13 @@ fun ReminderCard(
         ) {
             Column {
                 TextName(
-                    reminderName = reminder.title //TODO: change
+                    reminderName = reminder.title
                 )
-                TextDescription(
-                    reminderDescription = reminder.description //TODO: change
+                TextSubtitle(
+                    reminderSubtitle = "Date: " + reminder.date
+                )
+                TextSubtitle(
+                    reminderSubtitle = "Type: " + reminder.type
                 )
             }
             Spacer(

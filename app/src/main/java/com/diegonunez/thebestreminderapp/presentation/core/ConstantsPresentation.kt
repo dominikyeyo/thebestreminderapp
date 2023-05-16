@@ -19,9 +19,19 @@ class ConstantsPresentation {
         const val DISMISS = "Dismiss"
         const val UPDATE = "Update"
 
-        //Placeholders
-        const val REMINDER_NAME = "Type a reminder name..."
-        const val DESCRIPTION = "Type the description..."
+        //Labels
+        const val REMINDER_NAME = "Name"
+        const val REMINDER_DESCRIPTION = "Description"
+        const val REMINDER_DATE = "Date"
+        const val REMINDER_TYPE = "Type"
         const val NO_VALUE = ""
+
+
+        //Placeholders
+        const val REMINDER_NAME_PH = "Type a reminder name..."
+        const val REMINDER_DESCRIPTION_PH = "Type the description..."
+        const val REMINDER_DATE_PH = "Type the date"
+        const val REMINDER_TYPE_PH = "Type the type"
+        const val NO_VALUE_PH = ""
     }
 }

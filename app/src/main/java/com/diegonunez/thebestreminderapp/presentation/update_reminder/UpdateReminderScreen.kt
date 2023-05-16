@@ -33,6 +33,12 @@ fun UpdateReminderScreen(
                 updateDescription = { description ->
                     viewModel.updateDescription(description)
                 },
+                updateDate = { date ->
+                    viewModel.updateDate(date)
+                },
+                updateType = { type ->
+                    viewModel.updateType(type)
+                },
                 updateReminder = { reminder ->
                     viewModel.updateReminder(reminder)
                 },
