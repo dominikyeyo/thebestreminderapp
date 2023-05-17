@@ -20,6 +20,8 @@ object ConstantsPresentation {
         const val ADD = "Add"
         const val DISMISS = "Dismiss"
         const val UPDATE = "Update"
+        const val SELECT_DATE = "Select Date"
+        const val SELECT_TIME = "Select Time"
     }
 
     object Labels {

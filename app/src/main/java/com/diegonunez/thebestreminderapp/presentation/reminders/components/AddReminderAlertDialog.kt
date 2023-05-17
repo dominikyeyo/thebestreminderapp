@@ -29,6 +29,8 @@ import com.diegonunez.thebestreminderapp.domain.model.Reminder
 import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Actions.ADD_REMINDER
 import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Buttons.ADD
 import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Buttons.DISMISS
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Buttons.SELECT_DATE
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Buttons.SELECT_TIME
 import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Labels.NO_VALUE
 import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Labels.REMINDER_DATE
 import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Labels.REMINDER_DATE_PH
@@ -76,14 +78,14 @@ fun AddReminderAlertDialog(
         val formattedTime by remember {
             derivedStateOf {
                 DateTimeFormatter
-                    .ofPattern("hh:mm")
+                    .ofPattern("hh:mm a")
                     .format(pickedTime)
             }
         }
 
         val dateDialogState = rememberMaterialDialogState()
         val timeDialogState = rememberMaterialDialogState()
-        var date by remember { mutableStateOf("$formattedDate $formattedTime") }
+        var date ="$formattedDate $formattedTime"
 
         val focusRequester = FocusRequester()
 
@@ -148,8 +150,9 @@ fun AddReminderAlertDialog(
                     )
 
                     TextField(
-                        value = "$formattedDate $formattedTime",
+                        value = date,
                         onValueChange = { date = it },
+                        readOnly = true,
                         label = { Text(text = REMINDER_DATE) },
                         placeholder = {
                             Text(
@@ -173,26 +176,15 @@ fun AddReminderAlertDialog(
                         Button(onClick = {
                             dateDialogState.show()
                         }) {
-                            Text(text = "Pick date")
+                            Text(text = SELECT_DATE)
                         }
                         Spacer(modifier = Modifier.height(16.dp))
                         Button(onClick = {
                             timeDialogState.show()
                         }) {
-                            Text(text = "Pick time")
+                            Text(text = SELECT_TIME)
                         }
                     }
-
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceAround
-                    ) {
-                        Text(text = formattedDate)
-                        Spacer(modifier = Modifier.height(16.dp))
-                        Text(text = formattedTime)
-                    }
-
 
                     Spacer(
                         modifier = Modifier.height(16.dp)
