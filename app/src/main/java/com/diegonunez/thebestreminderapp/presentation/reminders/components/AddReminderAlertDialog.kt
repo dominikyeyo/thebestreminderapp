@@ -18,7 +18,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
@@ -26,19 +25,19 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.ADD
-import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.DISMISS
 import com.diegonunez.thebestreminderapp.domain.model.Reminder
-import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.ADD_REMINDER
-import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.NO_VALUE
-import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.REMINDER_DATE
-import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.REMINDER_DATE_PH
-import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.REMINDER_DESCRIPTION
-import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.REMINDER_DESCRIPTION_PH
-import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.REMINDER_NAME
-import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.REMINDER_NAME_PH
-import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.REMINDER_TYPE
-import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.REMINDER_TYPE_PH
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Actions.ADD_REMINDER
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Buttons.ADD
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Buttons.DISMISS
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Labels.NO_VALUE
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Labels.REMINDER_DATE
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Labels.REMINDER_DATE_PH
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Labels.REMINDER_DESCRIPTION
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Labels.REMINDER_DESCRIPTION_PH
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Labels.REMINDER_NAME
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Labels.REMINDER_NAME_PH
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Labels.REMINDER_TYPE
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Labels.REMINDER_TYPE_PH
 import com.vanpra.composematerialdialogs.MaterialDialog
 import com.vanpra.composematerialdialogs.datetime.date.datepicker
 import com.vanpra.composematerialdialogs.datetime.time.timepicker
@@ -149,7 +148,7 @@ fun AddReminderAlertDialog(
                     )
 
                     TextField(
-                        value = date,
+                        value = "$formattedDate $formattedTime",
                         onValueChange = { date = it },
                         label = { Text(text = REMINDER_DATE) },
                         placeholder = {

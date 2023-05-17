@@ -14,16 +14,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.REMINDER_NAME_PH
-import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.UPDATE
-import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.REMINDER_DESCRIPTION_PH
 import com.diegonunez.thebestreminderapp.domain.model.Reminder
-import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.REMINDER_DATE_PH
-import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.REMINDER_TYPE_PH
-import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.REMINDER_DATE
-import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.REMINDER_DESCRIPTION
-import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.REMINDER_NAME
-import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.REMINDER_TYPE
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Buttons.UPDATE
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Labels.REMINDER_DATE
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Labels.REMINDER_DATE_PH
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Labels.REMINDER_DESCRIPTION
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Labels.REMINDER_DESCRIPTION_PH
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Labels.REMINDER_NAME
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Labels.REMINDER_NAME_PH
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Labels.REMINDER_TYPE
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Labels.REMINDER_TYPE_PH
 
 @Composable
 fun UpdateReminderContent(

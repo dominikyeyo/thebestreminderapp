@@ -7,7 +7,7 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
-import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.REMINDER_ID
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Arguments.REMINDER_ID
 
 
 import com.diegonunez.thebestreminderapp.presentation.navigation.Screen.UpdateReminderScreen

@@ -8,7 +8,7 @@ import androidx.lifecycle.viewModelScope
 import com.diegonunez.thebestreminderapp.domain.repository.ReminderRepository
 
 import com.diegonunez.thebestreminderapp.domain.model.Reminder
-import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Companion.NO_VALUE_PH
+import com.diegonunez.thebestreminderapp.presentation.core.ConstantsPresentation.Labels.NO_VALUE_PH
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
