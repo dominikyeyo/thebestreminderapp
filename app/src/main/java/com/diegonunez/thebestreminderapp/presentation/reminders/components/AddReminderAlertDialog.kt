@@ -54,7 +54,7 @@ fun AddReminderAlertDialog(
     openDialog: Boolean,
     closeDialog: () -> Unit,
     addReminder: (reminder: Reminder) -> Unit,
-    setTimeNotification: () -> Unit
+    setReminderNotification: (reminder: Reminder) -> Unit
 ) {
     if (openDialog) {
 
@@ -238,7 +238,7 @@ fun AddReminderAlertDialog(
                         closeDialog()
                         val reminder = Reminder(0, name, description,date,type)
                         addReminder(reminder)
-                        setTimeNotification()
+                        setReminderNotification(reminder)
                     }
                 ) {
                     Text(

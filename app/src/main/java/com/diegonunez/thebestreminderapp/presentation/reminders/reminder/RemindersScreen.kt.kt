@@ -42,8 +42,8 @@ fun RemindersScreen(
                 addReminder = { reminder ->
                     viewModel.addReminder(reminder)
                 },
-                setTimeNotification = {
-                    viewModel.scheduleReminder()
+                setReminderNotification = { reminder ->
+                    viewModel.scheduleReminder(reminder)
                 }
             )
         },

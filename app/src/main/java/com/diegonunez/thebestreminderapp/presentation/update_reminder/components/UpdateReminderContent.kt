@@ -49,6 +49,7 @@ fun UpdateReminderContent(
     updateDate: (date: String) -> Unit,
     updateType: (type: String) -> Unit,
     updateReminder: (reminder: Reminder) -> Unit,
+    updateReminderNotification: (reminder: Reminder) -> Unit,
     navigateBack: () -> Unit
 ) {
     var pickedDateUpdate by remember {
@@ -163,6 +164,7 @@ fun UpdateReminderContent(
         Button(
             onClick = {
                 updateReminder(reminder)
+                updateReminderNotification(reminder)
                 navigateBack()
             }
         ) {

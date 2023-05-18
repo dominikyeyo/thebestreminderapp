@@ -79,10 +79,10 @@ class RemindersViewModel @Inject constructor(
     fun closeDialog() {
         openDialog = false
     }
-    internal fun scheduleReminder(
+    internal fun scheduleReminder(myReminder :Reminder
     ) {
         val pattern = DateTimeFormatter.ofPattern("MMM dd yyyy hh:mm a")
-        val reminderDate = LocalDateTime.parse(reminder.date, pattern)
+        val reminderDate = LocalDateTime.parse(myReminder.date, pattern)
         val reminderTime = reminderDate.atZone(ZoneOffset.UTC).toEpochSecond()
         val currentTime = LocalDateTime.now().atZone(ZoneOffset.UTC).toEpochSecond()
         val diff = (reminderTime - currentTime) * 1000
@@ -90,8 +90,8 @@ class RemindersViewModel @Inject constructor(
         val myWorkRequestBuilder = OneTimeWorkRequestBuilder<ReminderWorker>()
         myWorkRequestBuilder.setInputData(
             workDataOf(
-                "NAME" to reminder.title,
-                "MESSAGE" to reminder.description
+                "NAME" to myReminder.title,
+                "MESSAGE" to myReminder.description
             )
         )
         myWorkRequestBuilder.setInitialDelay(diff, TimeUnit.MILLISECONDS)
