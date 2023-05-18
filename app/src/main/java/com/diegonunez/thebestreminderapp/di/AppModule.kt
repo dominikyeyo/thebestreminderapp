@@ -12,10 +12,18 @@ import com.diegonunez.thebestreminderapp.data.dao.ReminderDao
 import com.diegonunez.thebestreminderapp.data.network.ReminderDb
 import com.diegonunez.thebestreminderapp.data.repository.ReminderRepositoryImpl
 import com.diegonunez.thebestreminderapp.domain.repository.ReminderRepository
+import com.diegonunez.thebestreminderapp.TheBestReminderApp
+import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
 class AppModule {
+
+    @Singleton
+    @Provides
+    fun provideApplication(@ApplicationContext app: Context): TheBestReminderApp {
+        return app as TheBestReminderApp
+    }
 
     @Provides
     fun provideReminderDb(

@@ -57,6 +57,9 @@ dependencies {
     //Hilt Navigation Compose
     implementation "androidx.hilt:hilt-navigation-compose:$hilt_navigation_compose_version"
 
+    // work manager
+    implementation("androidx.work:work-runtime-ktx:$work_version")
+
     implementation "io.github.vanpra.compose-material-dialogs:datetime:0.8.1-rc"
     coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.6'
 }

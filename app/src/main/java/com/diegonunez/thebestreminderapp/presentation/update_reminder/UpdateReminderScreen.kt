@@ -42,6 +42,9 @@ fun UpdateReminderScreen(
                 updateReminder = { reminder ->
                     viewModel.updateReminder(reminder)
                 },
+                updateNotification = {
+                    viewModel.scheduleReminder()
+                },
                 navigateBack = navigateBack
             )
 

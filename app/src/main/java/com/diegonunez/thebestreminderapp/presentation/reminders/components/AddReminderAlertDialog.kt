@@ -53,7 +53,8 @@ import java.time.format.DateTimeFormatter
 fun AddReminderAlertDialog(
     openDialog: Boolean,
     closeDialog: () -> Unit,
-    addReminder: (reminder: Reminder) -> Unit
+    addReminder: (reminder: Reminder) -> Unit,
+    setTimeNotification: () -> Unit
 ) {
     if (openDialog) {
 
@@ -237,6 +238,7 @@ fun AddReminderAlertDialog(
                         closeDialog()
                         val reminder = Reminder(0, name, description,date,type)
                         addReminder(reminder)
+                        setTimeNotification()
                     }
                 ) {
                     Text(

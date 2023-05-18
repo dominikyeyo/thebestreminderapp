@@ -36,4 +36,8 @@ object ConstantsPresentation {
         const val REMINDER_TYPE_PH = "Type the type"
         const val NO_VALUE_PH = ""
     }
+
+    object WorkConstants{
+        const val CHANNEL_ID = "reminder_id"
+    }
 }
